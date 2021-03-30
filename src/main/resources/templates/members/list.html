@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Members</title>
+
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/3.3.5/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen" />
+
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
+            th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+
+    <link href="../../static/css/spring-core.css"
+          th:href="@{css/spring-core.css}" rel="stylesheet" media="screen"/>
+
+</head>
+
+
+<body>
+
+<div class="container">
+    <div th:if="${not #lists.isEmpty(members)}">
+
+        <h2>Members</h2>
+
+        <table class="table table-striped">
+
+            <tr>
+                <th>Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Birthday</th>
+                <th>Sex</th>
+                <th>Number of Books</th>
+
+                <th>More</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+
+            <tr th:each="member : ${members}">
+                <td th:text="${member.id}"></td>
+                <td th:text="${member.firstname}"></td>
+                <td th:text="${member.lastname}"></td>
+                <td th:text="${member.birthday}"></td>
+                <td th:text="${member.sex}"></td>
+                <td th:text="${member.booksTaken}"></td>
+
+
+                <td><a th:href="${'/member/show/' + member.id}">View</a> </td>
+                <td><a th:href="${'/member/edit/' + member.id}">Edit</a> </td>
+                <td><a th:href="${'/member/delete/' + member.id}">Delete</a> </td>
+
+            </tr>
+        </table>
+    </div>
+    <!-- <div class="row">
+        <div class="col-sm-3">
+            <a href="/customers/new">New Customer</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-3">
+            <a href="/">Back to Index Page</a>
+        </div>
+    </div> -->
+</div>
+
+
+</body>
+</html>
