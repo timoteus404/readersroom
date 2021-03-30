@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Book Form For Details</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/3.3.5/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen"/>
+
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
+            th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+
+    <link href="../../static/css/spring-core.css"
+          th:href="@{css/spring-core.css}" rel="stylesheet" media="screen"/>
+</head>
+<body>
+<div class="container">
+
+    <div class="row">
+        <div class="col-sm-6">
+            <h2>Book Details</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Book Id:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${books.id}">Book Id</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Name:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${books.name}">Name</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Author:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${books.author}">Author</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 sm-2 control-label">Publisher:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${books.publisher}">Publisher</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 sm-2 control-label">Year:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${books.year}">Year</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 sm-2 control-label">Genre:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${books.genre}">Genre</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 sm-2 control-label">ISNB:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${books.isnb}">ISNB</p>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

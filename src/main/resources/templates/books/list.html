@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Books</title>
+
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/3.3.5/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen" />
+
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
+            th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+
+    <link href="../../static/css/spring-core.css"
+          th:href="@{css/spring-core.css}" rel="stylesheet" media="screen"/>
+
+</head>
+<body>
+<div class="container">
+    <div th:if="${not #lists.isEmpty(books)}">
+
+        <h2>Books</h2>
+
+        <table class="table table-striped">
+
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Author</th>
+                <th>Publisher</th>
+                <th>Year Published</th>
+                <th>Genre</th>
+                <th>ISNB</th>
+
+                <th>More</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+
+            <tr th:each="book : ${books}">
+                <td th:text="${book.id}"></td>
+                <td th:text="${book.name}"></td>
+                <td th:text="${book.author}"></td>
+                <td th:text="${book.publisher}"></td>
+                <td th:text="${book.year}"></td>
+                <td th:text="${book.genre}"></td>
+                <td th:text="${book.isnb}"></td>
+
+                <td><a th:href="${'/books/show/' + book.id}">View</a> </td>
+                <td><a th:href="${'/books/edit/' + book.id}">Edit</a> </td>
+                <td><a th:href="${'/books/delete/' + book.id}">Delete</a> </td>
+
+            </tr>
+        </table>
+    </div>
+    <!-- <div class="row">
+        <div class="col-sm-3">
+            <a href="/customers/new">New Customer</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-3">
+            <a href="/">Back to Index Page</a>
+        </div>
+    </div> -->
+</div>
+
+
+</body>
+</html>

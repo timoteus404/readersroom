@@ -1,0 +1,154 @@
+/*first layer*/
+body{
+    background-color:  #373737;
+    height: 100%;
+}
+
+
+.Title{
+    text-align: center;
+    color: white;
+    font-family: Baskerville;
+
+    /* font-size: 72px; */
+    font-size: 3.5vw;
+
+    border: 5px solid #616161;
+    /* margin: 5px; */
+
+    /*make div centered with 10% crop from both sides*/
+    width: 80%;
+    margin: 0 auto;
+    padding: 15px;
+    background: #f0e68c;
+
+    /*adds corners on all four side of div with img addition on background*/
+    border-radius: 25px;
+    background: url(/img/Library.jpg);
+}
+
+.wrap{
+    background: #373737;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    max-width: 98%;
+
+    /*aligning when resized*/
+    display: inline-block;
+    max-width:100%;
+}
+
+.container1{
+
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    width: 40%;
+    height:400px;
+    margin: 0 auto;
+    background: #8e8e8e;
+    font-size: medium;
+    text-align: left;
+
+    /*adds corners on all four side of div with img addition on background*/
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-top: 5px;
+
+    /*for inside content*/
+    padding: 12px;
+
+    /*aligning when resized*/
+    display:inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#welcomenote{
+    text-align: center;
+    /* border: 3px solid yellow; */
+    font-size: 3.5vw;
+    color: white;
+}
+
+.loginnote{
+    width: 80%;
+    margin-left: 10%;
+    color: white;
+    /* margin-right: 80%; */
+    /* text-align: center; */
+    /* border: 3px solid green; */
+}
+
+#spanfix{
+    /*trying to align when resized*/
+    font-size: 1.2vw;
+    margin-left: 10%;
+    display:inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+.buttonplacement{
+
+    /*trying to align the button*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:fit-content;
+    /* border: 3px solid black; */
+}
+
+button{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#inputbars{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    /* border: 3px solid black; */
+
+    background-color: #bdbdbd;
+    color: black;
+
+}
+
+
+/*experimental line below*/
+.container2{
+
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: white;
+
+    width: 40%;
+    height:400px;
+    margin: 0 auto;
+    font-size: medium;
+    text-align: left;
+
+    /*adds corners on all four side of div with img addition on background*/
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-top: 5px;
+
+    /*for inside content*/
+    padding: 12px;
+
+    /*aligning when resized*/
+    display:inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

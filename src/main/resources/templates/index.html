@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head lang="eng">
+
+    <meta charset="utf-8">
+    <title>Index Page for Readers Room</title>
+
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/3.3.5/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen" />
+
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
+            th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+
+    <!--    ../../static/css/stylesIndex.css-->
+    <link href="../static/css/stylesIndex.css"
+          th:href="@{css/stylesIndex.css}" rel="stylesheet" media="screen"/>
+
+</head>
+
+<body>
+
+<p class="Title" > Book Manager </p>
+
+<div class="wrap">
+
+    <div class="container1"  style="background-image: url('../static/css/img/libraryimg.jpg');">
+
+        <h2 id="welcomenote">Welcome back</h2>
+
+        <label class="loginnote">
+            <span id="spanfix">Username: </span>
+            <input id="inputbars" type="username">
+        </label>
+
+        <label class="loginnote">
+            <span id="spanfix">Password: </span>
+            <input id="inputbars" type="password">
+        </label>
+
+        <p class="buttonplacement">
+            <button type="button" class="submit">Sign In</button>
+        </p>
+
+
+    </div>
+
+    <div class="container2"
+         style="background-image: url('../static/css/img/bookimg.jpeg');">
+
+        <h2>calendar needs to be added by some time later</h2>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
