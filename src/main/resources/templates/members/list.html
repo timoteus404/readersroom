@@ -39,18 +39,18 @@
                 <th>Delete</th>
             </tr>
 
-            <tr th:each="member : ${members}">
-                <td th:text="${member.id}"></td>
-                <td th:text="${member.firstname}"></td>
-                <td th:text="${member.lastname}"></td>
-                <td th:text="${member.birthday}"></td>
-                <td th:text="${member.sex}"></td>
-                <td th:text="${member.booksTaken}"></td>
+            <tr th:each="members : ${members}">
+                <td th:text="${members.id}"></td>
+                <td th:text="${members.firstname}"></td>
+                <td th:text="${members.lastname}"></td>
+                <td th:text="${members.birthday}"></td>
+                <td th:text="${members.sex}"></td>
+                <td th:text="${members.booksTaken}"></td>
 
 
-                <td><a th:href="${'/member/show/' + member.id}">View</a> </td>
-                <td><a th:href="${'/member/edit/' + member.id}">Edit</a> </td>
-                <td><a th:href="${'/member/delete/' + member.id}">Delete</a> </td>
+                <td><a th:href="${'/members/show/' + members.id}">View</a> </td>
+                <td><a th:href="${'/members/edit/' + members.id}">Edit</a> </td>
+                <td><a th:href="${'/members/delete/' + members.id}">Delete</a> </td>
 
             </tr>
         </table>

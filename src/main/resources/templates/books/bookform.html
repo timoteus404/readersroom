@@ -20,6 +20,7 @@
     <h2>Customer Details</h2>
     <div>
         <form class="form-horizontal" th:object="${books}" th:action="@{/books}" method="post">
+
             <input type="hidden" th:field="*{id}"/>
             <div class="form-group">
                 <label class="col-sm-2 control-label">Name:</label>

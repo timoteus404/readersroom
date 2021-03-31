@@ -1,7 +1,6 @@
 package com.example.readersroom.controller;
 
-import com.example.readersroom.entity.Books;
-import com.example.readersroom.entity.Member;
+import com.example.readersroom.entity.Members;
 import com.example.readersroom.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -11,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping("/member")
+@RequestMapping("/members")
 public class MemberController {
 
     private MemberService memberService;
@@ -41,13 +40,14 @@ public class MemberController {
 
     @RequestMapping("/new")
     public String createBook(Model model){
-        model.addAttribute("members", new Member());
+        model.addAttribute("members", new Members());
         return "redirect:/members/memberform";
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public String saveOrUpdate(Member member){
-        Member savedMember = memberService.saveOrUpdate(member);
+    public String saveOrUpdate(Members members){
+        Members savedMember = memberService.saveOrUpdate(members);
+//        return "redirect:/members/show" + savedMember.getId();
         return "redirect:/members/list";
     }
 

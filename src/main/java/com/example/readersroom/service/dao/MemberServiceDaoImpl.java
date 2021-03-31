@@ -1,6 +1,6 @@
 package com.example.readersroom.service.dao;
 
-import com.example.readersroom.entity.Member;
+import com.example.readersroom.entity.Members;
 import com.example.readersroom.service.MemberService;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
@@ -14,22 +14,22 @@ public class MemberServiceDaoImpl extends AbsJpaDaoService implements MemberServ
 
 
     @Override
-    public List<Member> listAll() {
+    public List<Members> listAll() {
         EntityManager em = emf.createEntityManager();
-        return em.createQuery("from Member", Member.class).getResultList(); //-> no idea why from is mistake
+        return em.createQuery("from Members", Members.class).getResultList(); //-> no idea why from is mistake
     }
 
     @Override
-    public Member getById(Long id) {
+    public Members getById(Long id) {
         EntityManager em = emf.createEntityManager();
-        return em.find(Member.class, id);
+        return em.find(Members.class, id);
     }
 
     @Override
-    public Member saveOrUpdate(Member entity) {
+    public Members saveOrUpdate(Members entity) {
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
-        Member savedMember = em.merge(entity);
+        Members savedMember = em.merge(entity);
         em.getTransaction().commit();
         return savedMember;
     }
@@ -38,7 +38,7 @@ public class MemberServiceDaoImpl extends AbsJpaDaoService implements MemberServ
     public void delete(Long id) {
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
-        em.remove(em.find(Member.class, id));
+        em.remove(em.find(Members.class, id));
         em.getTransaction().commit();
 
     }
